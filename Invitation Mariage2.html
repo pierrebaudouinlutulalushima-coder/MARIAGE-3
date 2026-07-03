@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ruth & Hervé | Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="invitation3.CSS">
+</head>
+
+<body>
+
+<!-- ================= WELCOME SCREEN ================= -->
+<div id="welcome-screen">
+  <div class="welcome-box">
+
+    <h3>À l’attention de</h3>
+    <h2 id="guestName">Madame / Monsieur</h2>
+
+    <p>Vous êtes invité(e) à célébrer notre union</p>
+
+    <h1>Ruth & Hervé</h1>
+    <p>30 Juillet 2026</p>
+
+    <button id="enter-site">Ouvrir l’invitation</button>
+
+    <!-- BOUTON DOWNLOAD (WELCOME SCREEN) -->
+    <br><br>
+
+<a href="documents/Invitation_Ruth_Herve.pdf"
+   download="Invitation_Ruth_Herve.pdf"
+   class="download-btn animated-download">
+
+    <i class="fa-solid fa-file-arrow-down"></i>
+    Télécharger l'invitation
+
+</a>
+
+  </div>
+</div>
+
+<!-- ================= MUSIQUE ================= -->
+<audio id="backgroundMusic" loop>
+  <source src="audio/audio mariage.mpeg" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn">
+    <i class="fa-solid fa-music"></i>
+</button>
+
+<nav class="menu">
+
+<a href="#programme">Programme</a>
+
+<a href="#couple">Notre histoire</a>
+
+<a href="#gallery">Galerie</a>
+
+<a href="#rsvp">RSVP</a>
+
+<a href="#boissons">Réception</a>
+
+</nav>
+
+<!-- ================= PAGE 1 : PROGRAMME ================= -->
+<section id="programme" class="page active section bg-programme">
+
+  <h2>Programme de la cérémonie</h2>
+
+  <div class="timeline">
+
+    <div class="card">
+      <i class="fa-solid fa-church"></i>
+      <h3>Cérémonie</h3>
+      <p>15h00 - Église principale</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-camera"></i>
+      <h3>Photos</h3>
+      <p>17h00 - Séance photo couple</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-martini-glass"></i>
+      <h3>Réception</h3>
+      <p>19h00 - Salle des fêtes</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= PAGE 2 : COUPLE ================= -->
+<section id="couple" class="page section bg-couple">
+
+  <h2>Notre Histoire</h2>
+
+  <p class="intro-text">
+    Sous le ciel doré où l’amour s’étend, deux cœurs s’unissent pour la vie.
+  </p>
+
+  <div class="couple-container">
+
+    <div class="person">
+      <h3>Ruth</h3>
+      <p>Une femme douce, élégante et pleine de lumière.</p>
+    </div>
+
+    <div class="couple-image">
+      <img src="IMAGES/galerie3.jpeg" alt="Couple">
+    </div>
+
+    <div class="person">
+      <h3>Hervé</h3>
+      <p>Un homme fort, protecteur et rempli d’amour.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= PAGE 3 : GALERIE ================= -->
+<section id="gallery" class="page section bg-gallery">
+
+  <h2>Galerie du couple</h2>
+
+  <div class="gallery">
+
+    <img src="IMAGES/galerie1.jpeg" onclick="openImage(this)">
+    <img src="IMAGES/galerie2.jpeg" onclick="openImage(this)">
+    <img src="IMAGES/galerie3.jpeg" onclick="openImage(this)">
+    <img src="IMAGES/galerie4.png" onclick="openImage(this)">
+
+  </div>
+
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeImage()">
+  <img id="lightbox-img">
+</div>
+
+<!-- ================= PAGE 4 : RSVP ================= -->
+<section id="rsvp" class="page section bg-rsvp">
+
+  <h2>Confirmer votre présence</h2>
+
+  <form onsubmit="sendRSVP(); return false;">
+
+    <input id="name" type="text" placeholder="Nom complet" required>
+
+    <select id="status">
+      <option>Je serai présent(e)</option>
+      <option>Je serai absent(e)</option>
+    </select>
+
+    <button type="submit">Confirmer via WhatsApp</button>
+
+  </form>
+
+</section>
+
+<!-- ================= PAGE 5 : BOISSONS ================= -->
+<section id="boissons" class="page section bg-boissons">
+
+  <h2>Menu & Boissons</h2>
+
+  <div class="grid">
+
+    <div class="box">
+      <h3>Softs</h3>
+      <p>Coca-Cola, Fanta, Sprite</p>
+    </div>
+
+    <div class="box">
+      <h3>Bières</h3>
+      <p>Heineken, Primus, Turbo King</p>
+    </div>
+
+    <div class="box">
+      <h3>Vins</h3>
+      <p>Sélection premium</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+
+  <h2>Ruth & Hervé</h2>
+  <p>Merci de partager ce moment avec nous</p>
+
+  <div class="contact-icons">
+
+    <a href="tel:+243997681830">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <a href="https://wa.me/243997681830" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <a href="mailto:ruthbirindwa07@gmail.com">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+
+  </div>
+
+  <!-- DOWNLOAD FINAL -->
+<a href="documents/Invitation_Ruth_Herve.pdf"
+   download="Invitation_Ruth_Herve.pdf"
+   class="download-btn animated-download">
+
+    <i class="fa-solid fa-file-arrow-down"></i>
+    Télécharger l'invitation
+
+</a>
+
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
